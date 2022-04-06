@@ -13,8 +13,8 @@ namespace BellisimoPizza.Data.Repositories
 #pragma warning disable
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        internal BellisimoDbContext dbContext;
-        internal DbSet<T> dbSet;
+        public BellisimoDbContext dbContext;
+        public DbSet<T> dbSet;
         private readonly ILogger logger;
 
         public GenericRepository(BellisimoDbContext dbContext, ILogger logger)
